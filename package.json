@@ -1,0 +1,31 @@
+{
+  "name": "angular2-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "copy-angular": "copyfiles node_modules/angular2/bundles/*.js src/libs",
+    "copy-systemjs": "copyfiles node_modules/systemjs/dist/system.src.js src/libs",
+    "copy-rxjs": "copyfiles node_modules/rxjs/bundles/Rx.js src/libs",
+    "copy-all": "npm run copy-angular && npm run copy-systemjs && npm run copy-rxjs",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server -c configs/webserver.json",
+    "typings": "typings",
+    "postinstall": "typings install && copy-all"
+  },
+  "dependencies": {
+    "angular2": "2.0.0-beta.14",
+    "systemjs": "0.19.26",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "0.6.10"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "copyfiles": "^0.2.1",
+    "lite-server": "^2.2.0",
+    "typescript": "^1.8.10",
+    "typings": "^0.7.12"
+  }
+}
