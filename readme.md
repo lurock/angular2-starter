@@ -7,3 +7,7 @@ To get all modules:
 To run:  
 
     npm start
+    
+To run tests:
+    
+    npm run test

@@ -3,4 +3,6 @@ import {Component} from 'angular2/core';
     selector: 'app',
     template: '<h1>Angular 2  Starter</h1>'
 })
-export class AppComponent { }
+export class AppComponent {
+    myValue = 1;
+ }

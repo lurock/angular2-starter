@@ -11,7 +11,8 @@
     "tsc:w": "tsc -w",
     "lite": "lite-server -c configs/webserver.json",
     "typings": "typings",
-    "postinstall": "typings install && copy-all"
+    "test": "node node_modules/karma/bin/karma start configs/karma.config.js",
+    "postinstall": "typings install && npm run copy-all"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.14",
@@ -26,6 +27,10 @@
     "copyfiles": "^0.2.1",
     "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
-    "typings": "^0.7.12"
+    "typings": "^0.7.12",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-jasmine": "^0.3.6"
   }
 }
