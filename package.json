@@ -11,7 +11,7 @@
     "tsc:w": "tsc -w",
     "lite": "lite-server -c configs/webserver.json",
     "typings": "typings",
-    "test": "node node_modules/karma/bin/karma start configs/karma.config.js",
+    "test": "karma start configs/karma.config.js",
     "postinstall": "typings install && npm run copy-all"
   },
   "dependencies": {
