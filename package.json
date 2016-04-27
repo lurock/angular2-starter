@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "copy-angular": "copyfiles node_modules/angular2/bundles/*.js src/libs",
-    "copy-systemjs": "copyfiles node_modules/systemjs/dist/system.src.js src/libs",
-    "copy-rxjs": "copyfiles node_modules/rxjs/bundles/Rx.js src/libs",
-    "copy-all": "npm run copy-angular && npm run copy-systemjs && npm run copy-rxjs",
+    "copy:angular": "copyfiles node_modules/angular2/bundles/*.js src/libs",
+    "copy:systemjs": "copyfiles node_modules/systemjs/dist/system.src.js src/libs",
+    "copy:rxjs": "copyfiles node_modules/rxjs/bundles/Rx.js src/libs",
+    "copy:all": "npm run copy:angular & npm run copy:systemjs & npm run copy:rxjs",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server -c configs/webserver.json",
     "typings": "typings",
     "test": "karma start configs/karma.config.js",
-    "postinstall": "typings install && npm run copy-all"
+    "postinstall": "typings install & npm run copy:all"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.16",
